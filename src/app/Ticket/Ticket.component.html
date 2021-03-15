@@ -1,0 +1,21 @@
+<h2 class="m-3 text-right">نمایش بلیط</h2>
+<h6 class="toast-header rtl">
+  <strong class="mr-auto text-primary">
+    <p>خریدار: {{data.userName }}</p>
+    <p>تاریخ رزرو: {{data.reseveDate}}</p>
+  </strong>
+</h6>
+
+<h6 class="rtl">
+</h6>
+<div *ngFor="let ticket of data.tickets">
+
+  <div class="container p-3 my-3 border row rtl">
+  <p class="col-md-4">شماره پرواز: {{ticket.ticketCode }}</p>
+  <p class="col-md-4">تاریخ پرواز: {{ticket.flightDate }}</p>
+  <p class="col-md-4">نام مسافر: {{ticket.fullName }}</p>
+  <p class="col-md-4">حرکت از مبداء: {{ticket.source }}</p>
+  <p class="col-md-4">به مقصد: {{ticket.destination }}</p>
+  <p class="col-md-4">قیمت: {{ticket.price }}</p>
+  </div>
+</div>
